@@ -11,7 +11,7 @@ class testCasesEjerccio1(unittest.TestCase):
     def test_divisores_de_cero_deberia_devolver_vacio(self):
         self.assertEqual([], ejercicio1.divisores_de_un_numero(0,[1,2,3]))
 
-    def test_divisores_vacio_de_cero_deberia_devolver_vacio(self):
+    def test_envioDivisoresVacio_de_cero_deberia_devolver_vacio(self):
         self.assertEqual([],ejercicio1.divisores_de_un_numero(0,[]))
 
     def test_divisores_de_uno_deberia_devolver_uno(self):

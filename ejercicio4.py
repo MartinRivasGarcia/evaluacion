@@ -4,6 +4,7 @@ def campeon_torneo(planilla):
     partidos = len(planilla)
     equipos = {}
     ganador = ""
+
     #Armo un diccionario con todos los equipos participantes
     for encuentros in planilla:
         equipos[encuentros[0]] = 0
