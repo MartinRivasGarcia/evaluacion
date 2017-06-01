@@ -2,6 +2,9 @@ import unittest
 import ejercicio3
 
 def probarMatrizRandom(n):
+    anterior = []
+    iguales = 0
+    distintos = 0
     for d in range(0,10):
         matriz = ejercicio3.matriz_triangular(n)
 
@@ -12,6 +15,21 @@ def probarMatrizRandom(n):
             for b in range(a, n):
                 if((matriz[a][b]<0) or (matriz[a][b]>9)):
                     return False
+
+        if(anterior != []):
+            for a in range(0, n):
+                for b in range(a, n):
+                    if ((matriz[a][b] == anterior[a][b]) or (matriz[a][b] == anterior[a][b])):
+                        iguales = iguales + 1
+                    else:
+                        distintos = distintos + 1
+            if(iguales > distintos):
+                return False
+            else:
+                iguales = 0
+                distintos = 0
+
+        anterior = matriz
     return True
 
 class testCasesEjercicio3(unittest.TestCase):

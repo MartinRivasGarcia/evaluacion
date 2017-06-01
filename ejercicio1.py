@@ -11,5 +11,3 @@ def divisores_de_un_numero(n,lista):
     '''La devolucion va a ser una lista con todos los numeros que son divisores de n, en caso
     de que n no cumpla con las condiciones pedidas devuelve una lista vacia'''
     return (resolucion)
-
-print(divisores_de_un_numero(0,[1,2,3]))
